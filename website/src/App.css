@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.App {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sidebar {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #00aaff;
+  text-shadow: 0 0 5px #00aaff;
+}
+
+.chat-container {
+  background-color: #121212;
+  border-right: 1px solid #333;
+  height: 100vh;
+}
+
+.message-list {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 90%;
+  line-height: 1.4;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.message.user {
+  background: linear-gradient(45deg, #00aaff, #0077cc);
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+  max-width: 70%;
+}
+
+.message.bot {
+  /* background-color: #ffffff; */
+  color: #e0e0e0;
+  align-self: flex-start;
+}
+
+.input-container {
+  border-top: 1px solid #333;
+}
+
+.form-control {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+.form-control:focus {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #00aaff;
+  box-shadow: 0 0 5px #00aaff;
+}
+
+.btn-primary {
+  background-color: #00aaff;
+  border-color: #00aaff;
+}
+
+.btn-primary:hover {
+  background-color: #0077cc;
+  border-color: #0077cc;
+  box-shadow: 0 0 10px #00aaff;
+}
+
+.server-details {
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.server-details summary {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #1e1e1e;
+  color: #00aaff;
+  text-shadow: 0 0 5px #00aaff;
+}
+
+.server-details summary:hover {
+  background-color: #333;
+}
+
+.server-details-content {
+  padding: 10px;
+  background-color: #121212;
+}
+
+.server-url {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 0;
+}
